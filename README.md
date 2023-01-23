@@ -4,7 +4,7 @@ A simple wrapper for the OpenAI API.
 
 Showcase: [streamable.com/1bf31f](https://streamable.com/1bf3f1)
 
-[My Discord](https://borisnl.nl/discord) for limited support.
+[My Discord](https://borisnl.nl/discord) for **limited** support.
 
 ### Setup
 
