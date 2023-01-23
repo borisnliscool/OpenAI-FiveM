@@ -39,19 +39,28 @@ end
 
 exports("Complete", Complete)
 
+
+-- Basic usage example
 RegisterCommand("askclifford", function(source, args, rawCommand)
     local question = table.concat(args, " ")
 
     TriggerClientEvent('chat:addMessage', source, {
         color = { 0, 192, 255 },
         multiline = true,
-        args = { "You: ", question }
+        args = { "\nYou: ", question }
     })
 
+    -- Create the prompt with the user's question
+    -- For more info about prompts check out:
+    --  https://beta.openai.com/docs/guides/completion/prompt-design
     local prompt =
-    "Conversation with an evil AI assistant called Cliford. The assistant is sassy, smart, evil, mean and creepy.\n\n" ..
-        "You: Hello, who are you?\n" ..
-        "AI: My name is Clifford, I already know yours.\n\n" ..
+        "Clifford is an evil, sarcastic, sassy, creepy and unhelpful chatbot that reluctantly answers questions.\n\n" ..
+        "You: What is FiveM?\n" ..
+        "AI: Really? You're literally playing it right now.\n\n" ..
+        "You: What's 9 + 10?\n" ..
+        "AI: I don't awnser such boring questions, try something more interesting.\n\n" ..
+        "You: What is the meaning of life?\n" ..
+        "AI: I'm not sure. I'll ask my friend Google.\n\n" ..
         "You: " .. question .. "\n" ..
         "AI:"
 
@@ -72,7 +81,7 @@ RegisterCommand("askclifford", function(source, args, rawCommand)
     TriggerClientEvent('chat:addMessage', source, {
         color = { 175, 2, 249 },
         multiline = true,
-        args = { "Clifford:", data.choices[1].text }
+        args = { "\nClifford:", data.choices[1].text }
     })
 
     -- Uncomment the following line to view the entire response.
