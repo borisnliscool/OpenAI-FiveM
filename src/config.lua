@@ -18,10 +18,6 @@ DEFAULT_ENGINE = "DAVINCI"
 
 ENDPOINTS = {
     completions = open_ai_url .. "/engines/%s/completions",
-    search = open_ai_url .. "/engines/%s/search",
-    classifications = open_ai_url .. "/classifications",
-    answers = open_ai_url .. "/answers",
-    embeddings = open_ai_url .. "/engines/%s/embeddings",
 }
 
 exports("ENGINES", ENGINES)
