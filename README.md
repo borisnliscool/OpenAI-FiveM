@@ -37,3 +37,5 @@ print(json.encode(data, { indent = true }))
 ```
 
 For more information I recommend checking out [OpenAI's Website](https://beta.openai.com/docs/introduction) about this stuff.
+
+Like it? Star it.
